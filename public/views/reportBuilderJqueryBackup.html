@@ -1,0 +1,92 @@
+<style>
+.displayFlex {
+    display: flex;
+    padding: 10px;
+}
+
+.flexBlocks {
+    flex: 1;
+    margin-right: 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 15px;
+    display: flex;
+    padding: 20px;
+    margin-top: 10px;
+}
+</style>
+<div style="">
+<div id="componentPanel" style="display: inline-block;overflow-y:auto;width:30%;padding:10px;border:1px solid #aaaaaa;background:white;">
+<ul>
+  <li ng-click="addRowShow=!addRowShow">Add row
+  <div ng-show="addRowShow"> 
+	<div  class="flexBlocks sortableDiv draggableRow" ></div>
+  </div>
+  </li>
+  <li ng-click="simpleBarChartShow=!simpleBarChartShow">Simple bar chart
+  <div ng-show="simpleBarChartShow">  
+  	<px-simple-bar-chart  class="draggableBarChart"  chart-data="[ [1,2,3], [1,2,3], [1,2,3] ]">
+	</px-simple-bar-chart>  
+  </div>
+  </li>
+</ul>
+
+<!-- <ul>
+  <li draggable="true" ondragstart="drag(event)">
+    Cras justo odio
+  </li>
+</ul> -->
+
+
+</div>
+<div id="reportPanel" style="display: inline-block;overflow-y:auto;width:60%;padding:10px;border:1px solid #aaaaaa;background:white;"><!-- ondrop="drop(event)" ondragover="allowDrop(event)"  -->
+
+<div id="sortable">
+	<div class="flexBlocks sortableDiv" ></div>
+</div>
+
+
+
+<!-- <ul id="sortable">
+  <li>
+  	<div class="displayFlex">
+	<div style="flex:1;">
+	<div class="ui-state-default flexBlocks"></div>
+	</div>
+	</div>
+  </li>
+  <li>
+  	<div class="displayFlex">
+	<div style="flex:1;">
+	<div class="ui-state-default flexBlocks"></div>
+	</div>
+	<div style="flex:1;">
+	<div class="ui-state-default flexBlocks"></div>
+	</div>
+	</div>
+  </li>
+  <li>
+  	<div class="displayFlex">
+	<div style="flex:1;">
+	<div class="ui-state-default flexBlocks"></div>
+	</div>
+	</div>
+  </li>
+  <li>
+  	<div class="displayFlex">
+	<div style="flex:1;">
+	<div class="ui-state-default flexBlocks"></div>
+	</div>
+	</div>
+	</li>
+  <li>
+  	<div class="displayFlex">
+	<div style="flex:1;">
+	<div class="ui-state-default flexBlocks"></div>
+	</div>
+	</div>
+   </li>
+</ul> -->
+ 
+
+</div>
+</div>

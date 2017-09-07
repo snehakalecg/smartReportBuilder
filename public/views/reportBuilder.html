@@ -1,0 +1,1543 @@
+<div style="cursor: auto;" class="edit toolbox-reset" id="bodyContentRezize">
+  <div style="height:60vh;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header" style="margin-right: 100px;">
+        <a class="navbar-brand emphasized3" href="#">
+          Smart Report Builder
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+	 
+        <ul class="nav navbar-nav">
+		 <!-- <li>
+            <div class="btn-group" style="margin-right: 20px;">
+              <button onclick="javascript:resizeCanvas('lg');" class="btn btn-default navbar-btn"><i class="fa fa-desktop"></i> </button>
+              <button onclick="javascript:resizeCanvas('md');" class="btn btn-default navbar-btn"><i class="fa fa-laptop"></i> </button>
+              <button onclick="javascript:resizeCanvas('sm');" class="btn btn-default navbar-btn"><i class="fa fa-tablet"></i> </button>
+              <button onclick="javascript:resizeCanvas('xs');" class="btn btn-default navbar-btn"><i class="fa fa-mobile-phone"></i> </button>
+            </div>
+          </li> -->
+          <li>
+            <div class="btn-group" data-toggle="buttons-radio">
+              <button type="button" class="btn btn-default navbar-btn" id="sourcepreview" >
+                <i class="fa icon-eye-open" style="color: #3f95f1;"></i> Preview
+              </button>
+			   <button type="button" class="btn btn-default navbar-btn" data-target="#SelectByIdModal" data-toggle="modal"><i class="fa icon-eye-open" style="color: #3f95f1;"></i> Search By Id</button>
+			  <button type="button" class="btn btn-default navbar-btn" data-target="#SaveQueryModal" data-toggle="modal"> <i class="fa fa-edit" style="color: #3f95f1;"></i>Add Query</button>
+            </div>
+          </li>
+
+        </ul>
+       <ul class="nav navbar-nav navbar-right">
+          <li>
+            <div class="btn-group">
+              <button class="btn btn-default navbar-btn" href="#clear" id="clear" color="#333;">
+                <i class="fa icon-trash" style="color: #3f95f1;"></i>Clear
+              </button>
+              <button type="button" class="btn btn-primary navbar-btn" data-target="#downloadModal" rel="/build/downloadModal" role="button" data-toggle="modal">
+                <i class="fa icon-chevron-down" ></i>Download
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<!-- <--------------------------------------------------------------------------------------------------->
+
+    <div class="container-fluid" id="containerFluidId">
+      <div class="changeDimension" id="changeDimensionId">
+	  
+        <div class="row-fluid" id="row-fluid-container">
+		 
+          <div class="col-xs-3 column">
+		  
+            <span></span>
+            <div class="sidebar-nav" id="sidebarNav">
+			<div background-color="black">
+			</div>
+              <ul class="nav nav-list accordion-group">
+                <li class="nav-header">
+                  <div class="pull-right popover-info">
+                    <i class="icon-question-sign "></i>
+                    <div class="popover fade right">
+                      <div class="arrow"></div>
+                      <h3 class="popover-title">Help</h3>
+                      <div class="popover-content">TO CHANGE THE COLUMN CONFIGURATION YOU CAN EDIT THE DIFFERENT VALUES IN THE INPUT (THEY SHOULD ADD 12). IF YOU NEED MORE INFO PLEASE VISIT <a target="_blank" href="http://twitter.github.io/bootstrap/scaffolding.html#gridSystem"> BOOTSTRAP GRID SYSTEM</a></div>
+                    </div>
+                  </div>
+                  <i class="icon-plus icon-white"></i> GRID SYSTEM
+                </li>
+                <li style="display: list-item;" class="rows" id="estRows">
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="12" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix" id="someNewId">
+                        <div class="col-xs-12 column"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="4 4 4" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix">
+                        <div class="col-xs-4 column"></div>
+                        <div class="col-xs-4 column"></div>
+                        <div class="col-xs-4 column"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="2 10" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix">
+                        <div class="col-xs-2 column"></div>
+                        <div class="col-xs-10 column" ></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="3 9" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix">
+                        <div class="col-xs-3 column"></div>
+                        <div class="col-xs-9 column" ></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="4 8" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix">
+                        <div class="col-xs-4 column"></div>
+                        <div class="col-xs-8 column" ></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lyrow ui-draggable">
+                   <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                   <div class="preview">
+                     <input value="6 6" type="text">
+                   </div>
+                   <div class="view">
+                     <div class="row-fluid clearfix">
+                       <div class="col-xs-6 column"></div>
+                       <div class="col-xs-6 column"></div>
+                     </div>
+                   </div>
+                 </div>
+
+
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="8 4" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix">
+                        <div class="col-xs-8 column" ></div>
+                        <div class="col-xs-4 column"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="9 3" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix">
+                        <div class="col-xs-9 column" ></div>
+                        <div class="col-xs-3 column"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lyrow ui-draggable">
+                    <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+                    <div class="preview">
+                      <input value="10 2" type="text">
+                    </div>
+                    <div class="view">
+                      <div class="row-fluid clearfix">
+                        <div class="col-xs-10 column" ></div>
+                        <div class="col-xs-2 column"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+<!-- ---------------------------------------------------------------------------------------------------->
+		 
+<!-- Predix Component Starts Here----------------------------------------------------------------------------------- -->	
+			
+			 <ul class="nav nav-list accordion-group">
+                <li class="nav-header">
+                  <i class="icon-plus icon-white"></i> PREDIX COMPONENTS
+                
+             <div class="pull-right popover-info">
+                    <i class="icon-question-sign "></i>
+                   <div class="popover fade right">
+                <div class="arrow"></div>
+                <h3 class="popover-title">Help</h3>
+                <div class="popover-content">DRAG &amp; DROP THE ELEMENTS INSIDE THE COLUMNS WHERE YOU WANT TO INSERT IT.</div>
+              </div>
+                  </div>
+        </li>
+                <li style="display: none;" class="boxes" id="elmComponents">
+       
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-data-table</div>
+               <div class="view">
+     
+		
+		<px-data-table table-data='[{"first":"Valentine","last":"Meyer","email":"valentinemeyer@scentric.com"},{"first":"Silva","last":"Alexander","email":"silvaalexander@gmail.com"},{"first":"Hopkins","last":"Wong","email":"hopkinswong@hotmail.com"},{"first":"Joe","last":"Sherman","email":"joejoe@yahoo.com"},{"first":"Jane","last":"Bartlett","email":"jane@scentric.com"}]'>
+		<px-data-table-column name='first'></px-data-table-column>
+		</px-data-table>
+
+        </div>
+        </div>
+	
+	
+	     <div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+            </span>
+        <div class="preview">px-dropdown</div>
+               <div class="view">
+			<px-dropdown items='[{"key":"1","val":"iPhone"},{"key":"2","val":"Android"},{"key":"3","val":"Blackberry"},{"key":"4","val":"Windows Phone"},{"key":"5","val":"Flip Phone","disabled":true}]' sort-mode="key" button-style="default" display-value="Select" disable-clear="true" hide-chevron="true" search-mode="true"></px-dropdown>
+
+        </div>
+        </div>
+		
+		
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+            </span>
+        <div class="preview">px-file-upload</div>
+               <div class="view">
+			<px-file-upload message="Drag and drop files here, or click the button below." language="en"></px-file-upload>
+
+        </div>
+        </div>
+	
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-percentage-circle</div>
+               <div class="view">
+			  <px-percent-circle value="30" maximum="50"></px-percent-circle>
+
+        </div>
+        </div>
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-gauge</div>
+               <div class="view">
+			  <px-gauge value="10"> </px-gauge>
+
+        </div>
+        </div>
+		
+		
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-simple-bar-chart</div>
+               <div class="view">
+			<px-simple-bar-chart width="auto" height="300" chart-data='[[112,57,53,122,128,120,56,94,102]]' colors='["#265dab"]' legend-labels='[]' legend-order="sequential"></px-simple-bar-chart>
+        </div>
+        </div>
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-simple-horizontal-bar-chart</div>
+               <div class="view">
+			<px-simple-horizontal-bar-chart width="auto" height="auto" bar-labels="percentage" legend-labels='["Bar One","Bar Two","Bar Three","Bar Four","Bar Five","Bar Six"]' chart-data='[29,20,15,18,8,10]'></px-simple-horizontal-bar-chart>
+        </div>
+        </div>
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-simple-line-chart</div>
+               <div class="view">
+			<px-simple-line-chart line-data="[ [1,2], [2,3], [3,4] ]" columns="7" rows="7"></px-simple-line-chart>
+        </div>
+        </div>
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-simple-win-loss-chart</div>
+               <div class="view">
+			<px-simple-win-loss-chart chart-data='[2,6,-5,4,-3,2,7]' width="300" height="50"></px-simple-win-loss-chart>
+        </div>
+        </div>
+		
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-histogram</div>
+               <div class="view">
+			<px-chart-series-histogram name="The Display Name" line-width="5" lower-threshold="12" upper-threshold="16" id="hpt-acc-position-cruise" marker='{"enabled":false,"radius":15}'></px-chart-series-histogram>
+        </div>
+        </div>
+		
+		
+		
+		<div class="box box-element ui-draggable">
+            <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span>
+            <span class="configuration">
+               <button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button>
+			    <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#myModal">Attribute</button>
+            </span>
+        <div class="preview">px-vis-pie-chart</div>
+               <div class="view">
+			<px-vis-pie-chart prevent-resize="true" width="450" height="450" chart-horizontal-alignment="center" chart-vertical-alignment="center" margin='{"top":"10","bottom":"10","left":"0","right":"0"}' register-config='{"type":"vertical","width":200}' chart-data='[{"percentage":"26","x":15,"y":"IPA"},{"percentage":"2","x":1,"y":"Pils"},{"percentage":"2","x":1,"y":"Lager"},{"percentage":"14","x":8,"y":"Lambic"},{"percentage":"21","x":12,"y":"Stout"},{"percentage":"12","x":7,"y":"Pale Ale"},{"percentage":"16","x":9,"y":"Porter"},{"percentage":"7","x":4,"y":"Heffeweisse"}]' series-config='{"mySerie":{"xAxisUnit":"pints","y":"y","x":"x"}}' title="Total" title-spacing="5" dynamic-menu-config='[{"name":"Log message","action":"function(data) {console.log(\"logging message\")}","eventName":"delete","icon":"fa-trash"}]'></px-vis-pie-chart>
+        </div>
+        </div>
+		
+          </li>
+              </ul>
+<!-- Predix Component Ends Here----------------------------------------------------------------------------------- -->		
+             
+<!-- Component starts  Here----------------------------------------------------------------------------------------- -->			  
+			  
+		<ul class="nav nav-list accordion-group">
+          <li class="nav-header"><i class="icon-plus icon-white"></i> Components <div class="pull-right popover-info"><i class="icon-question-sign "></i>
+           <div class="popover fade right"><div class="arrow"></div> 
+          	<h3 class="popover-title">Help</h3> 
+        	<div class="popover-content">DRAG &amp; DROP THE ELEMENTS INSIDE THE COLUMNS WHERE YOU WANT TO INSERT IT.</a></div></div> 
+                </div>
+         </li>
+		 
+         <li class="boxes" id="elmComponents">
+	      <div class="box box-element">
+  	        <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+	         <span class="drag label"><i class="icon-move"></i>Drag</span>
+               <span class="configuration">
+	        	<span class="btn-group btn-group-xs">
+	                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Size <span class="caret"></span></a>
+	              <ul class="dropdown-menu">
+		
+					<li class="active" ><a href="#" rel="">Default</a></li>
+					<li class="" ><a href="#" rel="btn-group-lg">Large</a></li>
+					<li class="" ><a href="#" rel="btn-group-md">Medium</a></li>
+					<li class="" ><a href="#" rel="btn-group-sm">Small</a></li>
+					<li class="" ><a href="#" rel="btn-group-xs">Extra small</a></li>
+					</ul>
+						</span>
+						<a class="btn btn-xs btn-default" href="#" rel="btn-group-vertical">Vertical</a>
+					  </span>
+						<div class="preview">Button Group</div>
+						<div class="view">
+							<div class="btn-group">
+						  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-align-left"></i> Left</button>
+						  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-align-center"></i> Center</button>
+						  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-align-right"></i> Right</button>
+						  <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-align-justify"></i> Justify</button>
+				 </div>
+			     </div>
+			</div>
+				<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<span class="configuration">
+						<a class="btn btn-xs btn-default" href="#" rel="dropup">Dropup</a>
+					</span>
+					<div class="preview">Button Dropdowns</div>
+					<div class="view">
+						<div class="btn-group">
+							<button class="btn btn-default" contenteditable="true">Action</button>
+							<button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+							<ul class="dropdown-menu" contenteditable="true">
+								<li><a href="#">Action</a></li>
+								<li class="disabled"><a href="#">Another action</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Something else here</a></li>				
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<span class="configuration">
+						<span class="btn-group btn-group-xs">
+					<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+								<li class="" ><a href="#" rel="nav-tabs">Default</a></li>
+								<li class="" ><a href="#" rel="nav-pills">Pills</a></li>
+							</ul>
+			             	</span>
+						<a class="btn btn-xs btn-default" href="#" rel="nav-stacked">Stacked</a>
+					</span>
+					<div class="preview">Navs</div>
+					<div class="view">
+						<ul class="nav nav-tabs" contenteditable="true">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Profile</a></li>
+							<li class="disabled"><a href="#">Messages</a></li>
+							<li class="dropdown pull-right">
+								<a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+							  <li><a href="#">Action</a></li>
+							  <li><a href="#">Another action</a></li>
+							  <li><a href="#">Something else here</a></li>
+							  <li class="divider"></li>
+							  <li><a href="#">Separated link</a></li>
+							</ul>
+						  </li>
+						</ul>
+			</div>
+			</div>
+			
+			<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<div class="preview">Breadcrumb</div>
+				<div class="view">
+
+				<ul class="breadcrumb">
+					  <li><a href="#" contenteditable="true">Home</a> <span class="divider">/</span></li>
+					  <li><a href="#" contenteditable="true">Library</a> <span class="divider">/</span></li>
+					  <li class="active" contenteditable="true">Data</li>
+				</ul>
+
+				</div>
+			</div>
+			
+				<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<span class="configuration">
+						<span class="btn-group btn-group-xs">
+					<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Size <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+								<li class="" ><a href="#" rel="pagination-lg">Large</a></li>
+								<li class="active" ><a href="#" rel="">Medium</a></li>
+								<li class="" ><a href="#" rel="pagination-sm">Small</a></li>
+							</ul>
+						  </span>
+
+							</span>
+					<div class="preview">Pagination</div>
+					<div class="view">
+							<ul class="pagination" contenteditable="true">
+								<li><a href="#">Prev</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">Next</a></li>
+							</ul>
+					</div>
+				</div>
+				
+				
+				<div class="box box-element">
+							 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+							<span class="drag label"><i class="icon-move"></i>Drag</span>
+							<span class="configuration">
+								<span class="btn-group btn-group-xs">
+							<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+										<li class="" ><a href="#" rel="label-default">Default</a></li>
+										<li class="" ><a href="#" rel="label-primary">Primary</a></li>
+										<li class="" ><a href="#" rel="label-success">Success</a></li>
+										<li class="" ><a href="#" rel="label-info">Info</a></li>
+										<li class="" ><a href="#" rel="label-warning">Warning</a></li>
+										<li class="" ><a href="#" rel="label-danger">Danger</a></li>
+									</ul>
+								</span>
+								</span>
+								<div class="preview">Label</div>
+								<div class="view">
+									<span class="label label-default" contenteditable="true">Label</span>
+								</div>
+				</div>
+				
+				
+						<div class="box box-element">
+							 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+							<span class="drag label"><i class="icon-move"></i>Drag</span>
+							<span class="configuration">
+							</span>
+							<div class="preview">Badge</div>
+							<div class="view">
+							<ul class="nav nav-pills" contenteditable="true">
+							  <li class="active">
+								<a href="#">
+								  <span class="badge pull-right">42</span>
+								  Home
+								</a>
+							  </li>
+							  <li>
+								<a href="#">
+								  <span class="badge pull-right">16</span>
+								  More
+								</a>
+							  </li>
+							</ul>
+							</div>
+						</div>
+						
+						
+						<div class="box box-element">
+							 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+							<span class="drag label"><i class="icon-move"></i>Drag</span>
+							<span class="configuration">
+								<a class="btn btn-xs btn-default" href="#" rel="well">Well</a>
+							   </span>
+							 <div class="preview">Jumbotron</div>
+							<div class="view">
+								<div class="jumbotron" contenteditable="true">
+									<h2>Hello, world!</h2>
+									<p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+									<!-- <p><a class="btn btn-primary btn-large" href="#">Learn more</a></p> -->
+								</div>
+							</div>
+						</div>
+						
+									
+					<div class="box box-element">
+						 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+						<span class="drag label"><i class="icon-move"></i>Drag</span>
+						<div class="preview">Page Header</div>
+						<div class="view">
+							<div class="page-header">
+							<h1 contenteditable="true">Include your header! <small>UI generetaor</small></h1>
+						   </div>
+							</div>
+					 </div>
+		 
+		 
+				<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<div class="preview">Text</div>
+					<div class="view">
+						<h2 contenteditable="true">Heading</h2>
+						<p contenteditable="true">Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.</p>
+						<p><a class="btn" href="#" contenteditable="true">View details &raquo;</a></p>
+					</div>
+			   </div>
+			   
+				<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<div class="preview">Thumbnails</div>
+					<div class="view">
+							<div class="row">
+							  <div class="col-md-4">
+								<div class="thumbnail">
+								  <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg">
+								  <div class="caption" contenteditable="true">
+									<h3>Thumbnail label</h3>
+									<p>Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.</p>
+									<p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+								  </div>
+								</div>
+							  </div>
+							  <div class="col-md-4">
+								<div class="thumbnail">
+								  <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg">
+								  <div class="caption" contenteditable="true">
+									<h3>Thumbnail label</h3>
+									<p>Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.</p>
+									<p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+								  </div>
+								</div>
+							  </div>
+							  <div class="col-md-4">
+								<div class="thumbnail">
+								  <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg">
+								  <div class="caption" contenteditable="true">
+									<h3>Thumbnail label</h3>
+									<p>Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.</p>
+									<p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+								  </div>
+								</div>
+							  </div>
+							</div>
+					</div>
+				</div>
+				
+		   <div class="box box-element">
+				  <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<span class="configuration">
+						  
+						<a class="btn btn-xs btn-default" href="#" rel="progress-striped">Striped</a>
+						<a class="btn btn-xs btn-default" href="#" rel="active">Active</a>
+					</span>
+					<div class="preview">Progress Bar</div>
+					<div class="view">
+						<div class="progress">
+							<div class="progress-bar progress-success" style="width: 60%;"></div>
+						</div>
+				</div>
+		</div>
+		
+				<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<span class="configuration">
+						<a class="btn btn-xs btn-default" href="#" rel="well">well</a>
+					</span>
+					<div class="preview">Media Object</div>
+					<div class="view">
+						<div class="media">
+					  <a href="#" class="pull-left">
+						<img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object">
+					  </a>
+					  <div class="media-body" contenteditable="true">
+						<h4 class="media-heading">Nested media heading</h4>
+						Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.
+						<div class="media">
+						  <a href="#" class="pull-left">
+							<img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object">
+						  </a>
+						  <div class="media-body" contenteditable="true">
+							<h4 class="media-heading">Nested media heading</h4>
+							Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.
+						  </div>
+						</div>
+					  </div>
+					</div>
+					</div>
+				</div>
+				
+								
+				<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+					<span class="drag label"><i class="icon-move"></i>Drag</span>
+					<span class="configuration">
+					</span>
+					<div class="preview">List group</div>
+					<div class="view">
+						<div class="list-group" contenteditable="true">
+							<a href="#" class="list-group-item active">Home</a>
+					  <div class="list-group-item">List header</div>
+							<div class="list-group-item">
+						<h4 class="list-group-item-heading">List group item heading</h4>
+						<p class="list-group-item-text">...</p>
+					  </div>
+							<div class="list-group-item"><span class="badge">14</span>Help</div>
+							<a class="list-group-item active"><span class="badge">14</span>Help</a>
+						</div>
+					</div>
+				</div>
+				
+				
+		<div class="box box-element">
+			 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+			<span class="configuration">
+				<span class="btn-group btn-group-xs">
+			<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+						<li class="" ><a href="#" rel="panel-default">Default</a></li>
+						<li class="" ><a href="#" rel="panel-primary">Primary</a></li>
+						<li class="" ><a href="#" rel="panel-success">Success</a></li>
+						<li class="" ><a href="#" rel="panel-info">Info</a></li>
+						<li class="" ><a href="#" rel="panel-warning">Warning</a></li>
+						<li class="" ><a href="#" rel="panel-danger">Danger</a></li>
+					</ul>
+			  </span>
+					  
+			</span>
+			<div class="preview">Panels</div>
+			<div class="view">
+				<div class="panel panel-default">
+			  <div class="panel-heading">
+				<h3 class="panel-title" contenteditable="true">Panel title</h3>
+			  </div>
+			  <div class="panel-body" contenteditable="true">
+				Panel content
+			  </div>
+			  <div class="panel-footer" contenteditable="true">
+				Panel footer
+			  </div>
+			</div>
+			</div>
+		</div>
+		 
+		</li>
+		</ul>	  
+<!-- Componenets Ends Here----------------------------------------------------------------------------------- -->		 
+ <!-- JavaScript Starts Here----------------------------------------------------------------------------------- -->
+	<ul class="nav nav-list accordion-group latest-group-sidebar">
+		<li class="nav-header"><i class="icon-plus icon-white"></i></i> JavaScript 
+			 <div class="pull-right popover-info"><i class="icon-question-sign "></i>
+			 <div class="popover fade right"><div class="arrow"></div> 
+				<h3 class="popover-title">Help</h3> 
+				<div class="popover-content">DRAG &amp; DROP THE ELEMENTS INSIDE THE COLUMNS WHERE YOU WANT TO INSERT IT.</div></div> 
+			 </div>
+		</li>
+		<li class="boxes mute" id="elmJS" >
+			<div class="box box-element">
+			 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+			<div class="preview">Modal</div>
+			<div class="view">
+				<!-- Button to trigger modal -->
+						<a id="myModalLink" href="#myModalContainer" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+				 
+		<!-- Modal -->
+		<div class="modal fade" id="myModalContainer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel" contenteditable="true">Modal title</h4>
+			  </div>
+			  <div class="modal-body" contenteditable="true">
+				...
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" contenteditable="true">Close</button>
+				<button type="button" class="btn btn-primary" contenteditable="true">Save changes</button>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+			</div>
+		</div>
+			<div class="box box-element">
+			 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+			<span class="configuration">
+		  <span class="btn-group btn-group-xs">
+			<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Position <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+						<li class="active" ><a href="#" rel="">Default</a></li>
+						<li class="" ><a href="#" rel="navbar-static-top">Static top</a></li>
+						<li class="" ><a href="#" rel="navbar-fixed-top">Navbar fixed top</a></li>
+						<li class="" ><a href="#" rel="navbar-fixed-bottom">Navbar fixed bottom</a></li>
+					</ul>
+		</span>
+				<a class="btn btn-xs btn-default" href="#" rel="navbar-inverse">Inverse</a>
+				
+			</span>
+			<div class="preview">Navbar</div>
+			<div class="view">
+
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Brand</a>
+		  </div>
+
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="#">Link</a></li>
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				  <li><a href="#">Action</a></li>
+				  <li><a href="#">Another action</a></li>
+				  <li><a href="#">Something else here</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Separated link</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">One more separated link</a></li>
+				</ul>
+			  </li>
+			</ul>
+			<form class="navbar-form navbar-left" role="search">
+			  <div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				  <li><a href="#">Action</a></li>
+				  <li><a href="#">Another action</a></li>
+				  <li><a href="#">Something else here</a></li>
+				  <li class="divider"></li>
+				  <li><a href="#">Separated link</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </div><!-- /.navbar-collapse -->
+		</nav>
+
+			</div>
+		</div>
+			<div class="box box-element">
+			 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+			<span class="configuration">
+			</span>
+			<div class="preview">Tabs</div>
+			<div class="view">
+				<div class="tabbable" id="myTabs"> <!-- Only required for left/right tabs -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#tab1" data-toggle="tab" contenteditable="true">Section 1</a></li>
+						<li><a href="#tab2" data-toggle="tab" contenteditable="true">Section 2</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab1">
+							<p contenteditable="true">I'm in Section 1.</p>
+						</div>
+						<div class="tab-pane" id="tab2">
+							<p contenteditable="true">How's your day, I'm in Section 2.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="box box-element">
+			 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+			<span class="configuration">
+				<span class="btn-group btn-group-xs">
+			<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+						<li class="" ><a href="#" rel="alert-success">Success</a></li>
+						<li class="" ><a href="#" rel="alert-info">Info</a></li>
+						<li class="" ><a href="#" rel="alert-warning">Warning</a></li>
+						<li class="" ><a href="#" rel="alert-danger">Danger</a></li>
+					</ul>
+		</span>
+					  
+			</span>
+			<div class="preview">Alerts</div>
+			<div class="view">
+				<div class="alert alert-success alert-dismissable" contenteditable="true">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<h4>Alert!</h4>
+					<strong>Warning!</strong> Best check your self, you're not looking too good.
+				</div>
+			</div>
+		</div>
+			<div class="box box-element">
+			 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+			<div class="preview">Collapse</div>
+			<div class="view">
+				<div class="panel-group" id="myAccordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						  <a class="panel-title" data-toggle="collapse" data-parent="#myAccordion" href="#collapseOne" contenteditable="true">
+							Collapsible Group Item #1
+						  </a>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in">
+						  <div class="panel-body" contenteditable="true">
+							Collapsible Group Item #1
+						  </div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						  <a class="panel-title" data-toggle="collapse" data-parent="#myAccordion" href="#collapseTwo" contenteditable="true">
+							Collapsible Group Item #2
+						  </a>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+						  <div class="panel-body" contenteditable="true">
+							Collapsible Group Item #2
+						  </div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+			<div class="box box-element">
+			 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+			<div class="preview">Carousel</div>
+			<div class="view">
+				
+				
+		<div class="carousel slide" id="myCarousel">
+		  <ol class="carousel-indicators">
+			<li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+			<li data-slide-to="1" data-target="#myCarousel" class=""></li>
+			<li data-slide-to="2" data-target="#myCarousel" class=""></li>
+		  </ol>
+		  <div class="carousel-inner">
+			<div class="item active">
+			  <img alt="Carousel Bootstrap First" src="http://lorempixel.com/output/sports-q-c-1600-500-1.jpg">
+			  <div class="carousel-caption">
+				<h4>First Thumbnail label</h4>
+				<p>Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.</p>
+			  </div>
+			</div>
+			<div class="item">
+			  <img alt="Carousel Bootstrap Second" src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg">
+			  <div class="carousel-caption">
+				<h4>Second Thumbnail label</h4>
+				<p>Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems..</p>
+			  </div>
+			</div>
+			<div class="item">
+			  <img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
+			  <div class="carousel-caption">
+				<h4>Third Thumbnail label</h4>
+				<p>Layouts are a key part of Android applications that directly affect the user experience. If implemented poorly, your layout can lead to a memory hungry application with slow UIs. This class shows you how to avoid such problems.</p>
+			  </div>
+			</div>
+		  </div>
+
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+		</div>		
+					
+			</div>
+		</div>
+		</li>
+ </ul>
+
+<!-- JavaScript Ends Here----------------------------------------------------------------------------------- -->
+<!-- CSS Starts Here---------------------------------------------------------------------------------------- -->
+<ul class="nav nav-list accordion-group">
+		<li class="nav-header"><i class="icon-plus icon-white"></i> Base CSS
+		 <div class="pull-right popover-info"><i class="icon-question-sign "></i>
+		 <div class="popover fade right"><div class="arrow"></div> 
+			<h3 class="popover-title">Help</h3> 
+			<div class="popover-content">DRAG &amp; DROP THE ELEMENTS INSIDE THE COLUMNS WHERE YOU WANT TO INSERT IT.</div></div> 
+		 </div>
+		</li>
+			<li class="boxes" id="elmBase">
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Align <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="active" ><a href="#" rel="">Default</a></li>
+							<li class="" ><a href="#" rel="text-left">Left</a></li>
+							<li class="" ><a href="#" rel="text-center">Center</a></li>
+							<li class="" ><a href="#" rel="text-right">Right</a></li>
+						</ul>
+			</span>
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Emphasis <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="active" ><a href="#" rel="">Default</a></li>
+							<li class="" ><a href="#" rel="text-muted">Muted</a></li>
+							<li class="" ><a href="#" rel="text-primary">Primary</a></li>
+							<li class="" ><a href="#" rel="text-success">Success</a></li>
+							<li class="" ><a href="#" rel="text-info">Info</a></li>
+							<li class="" ><a href="#" rel="text-warning">Warning</a></li>
+							<li class="" ><a href="#" rel="text-danger">Danger</a></li>
+						</ul>
+			</span>
+				</span>
+				<div class="preview">Title</div>
+			<div class="view">
+				<h3 contenteditable="true">Put your Title here</h3>
+			</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+			<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Align <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="active" ><a href="#" rel="">Default</a></li>
+							<li class="" ><a href="#" rel="text-left">Left</a></li>
+							<li class="" ><a href="#" rel="text-center">Center</a></li>
+							<li class="" ><a href="#" rel="text-right">Right</a></li>
+						</ul>
+			</span>
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Emphasis <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="active" ><a href="#" rel="">Default</a></li>
+							<li class="" ><a href="#" rel="text-muted">Muted</a></li>
+							<li class="" ><a href="#" rel="text-primary">Primary</a></li>
+							<li class="" ><a href="#" rel="text-success">Success</a></li>
+							<li class="" ><a href="#" rel="text-info">Info</a></li>
+							<li class="" ><a href="#" rel="text-warning">Warning</a></li>
+							<li class="" ><a href="#" rel="text-danger">Danger</a></li>
+						</ul>
+			</span>
+									  
+					<a class="btn btn-xs btn-default" href="#" rel="lead">Lead</a>
+				</span>
+				<div class="preview">Paragraph</div>
+				<div class="view">
+					<p contenteditable="true">Layouts are a key part of Android applications, <strong>that directly affect the user experience.</strong>. If implemented poorly, your layout<em>can lead to a memory hungry application with slow UIs.</em> This class shows you how to avoid such problems.<small>You can design your paragraph in many ways. </small></p>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<div class="preview">Address</div>
+				<div class="view">
+					<address contenteditable="true">
+						<strong>Twitter, Inc.</strong><br>
+						795 Folsom Ave, Suite 600<br>
+						San Francisco, CA 94107<br>
+						<abbr title="Phone">P:</abbr> (123) 456-7890
+					</address>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">		  
+					<a class="btn btn-xs btn-default" href="#" rel="pull-right">Pull right</a>
+				</span>
+				<div class="preview">Blockquote</div>
+				<div class="view">
+				<blockquote contenteditable="true">
+				  <p>Layouts are a key part of Android applications.</p>
+				  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+				</blockquote>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">		  
+					<a class="btn btn-xs btn-default" href="#" rel="list-unstyled">Unstyled</a>
+					<a class="btn btn-xs btn-default" href="#" rel="list-inline">Inline</a>
+				</span>
+				<div class="preview">Unordered List</div>
+				<div class="view">
+						<ul contenteditable="true">
+						  <li>We are what we repeatedly do. Excellence, therefore, is not an act but a habit.</li>
+						  <li>The best way out is always through.</li>
+						  <li>Do not wait to strike till the iron is hot; but make it hot by striking.</li>
+						  <li>Great spirits have always encountered violent opposition from mediocre minds.</li>
+						  <li>Whether you think you can or think you can’t, you’re right.</li>
+						  <li>I know for sure that what we dwell on is who we become.</li>
+						  <li>You must be the change you want to see in the world.</li>
+						  <li>Failure is the condiment that gives success its flavor.</li>
+						</ul>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">		  
+					<a class="btn btn-xs btn-default" href="#" rel="list-unstyled">Unstyled</a>
+					<a class="btn btn-xs btn-default" href="#" rel="list-inline">Inline</a>
+				</span>
+				<div class="preview">Ordered List</div>
+				<div class="view">
+						<ol contenteditable="true">
+						  <li>We are what we repeatedly do. Excellence, therefore, is not an act but a habit.</li>
+						  <li>The best way out is always through.</li>
+						  <li>Do not wait to strike till the iron is hot; but make it hot by striking.</li>
+						  <li>Great spirits have always encountered violent opposition from mediocre minds.</li>
+						  <li>Whether you think you can or think you can’t, you’re right.</li>
+						  <li>I know for sure that what we dwell on is who we become.</li>
+						  <li>You must be the change you want to see in the world.</li>
+						  <li>Failure is the condiment that gives success its flavor.</li>
+						</ol>
+				</div>
+			</div>
+				<div class="box box-element">
+					 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">		  
+					<a class="btn btn-xs btn-default" href="#" rel="dl-horizontal">Horizontal</a>
+				</span>
+				<div class="preview">Description</div>
+				<div class="view">
+					<dl contenteditable="true">
+						<dt>Description lists</dt>
+						<dd>A description list is perfect for defining terms.</dd>
+						<dt>Description lists</dt>
+						<dd>A description list is perfect for defining terms.</dd>
+						<dd>A description list is perfect for defining terms.</dd>
+						<dt>Description lists</dt>
+						<dd>A description list is perfect for defining terms.</dd>
+						<dt>Description lists</dt>
+						<dd>A description list is perfect for defining terms.</dd>
+					</dl>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Style <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="active" ><a href="#" rel="">Default</a></li>
+							<li class="" ><a href="#" rel="table-striped">Striped</a></li>
+							<li class="" ><a href="#" rel="table-bordered">Bordered</a></li>
+						</ul>
+			</span>
+					<a class="btn btn-xs btn-default" href="#" rel="table-hover">Hover</a>
+					<a class="btn btn-xs btn-default" href="#" rel="table-condensed">Condensed</a>
+				</span>
+				<div class="preview">Table</div>
+				<div class="view">
+					<table class="table" contenteditable="true">
+				  <thead>
+					<tr>
+					  <th>#</th>
+					  <th>Product</th>
+					  <th>Payment Taken</th>
+					  <th>Status</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td>1</td>
+					  <td>TB - Monthly</td>
+					  <td>01/04/2012</td>
+					  <td>Default</td>
+					</tr>
+					<tr class="active">
+					  <td>1</td>
+					  <td>TB - Monthly</td>
+					  <td>01/04/2012</td>
+					  <td>Approved</td>
+					</tr>
+					<tr class="success">
+					  <td>2</td>
+					  <td>TB - Monthly</td>
+					  <td>02/04/2012</td>
+					  <td>Declined</td>
+					</tr>
+					<tr class="warning">
+					  <td>3</td>
+					  <td>TB - Monthly</td>
+					  <td>03/04/2012</td>
+					  <td>Pending</td>
+					</tr>
+					<tr class="danger">
+					  <td>4</td>
+					  <td>TB - Monthly</td>
+					  <td>04/04/2012</td>
+					  <td>Call in to confirm</td>
+					</tr>
+				  </tbody>
+				</table>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+					<a class="btn btn-xs btn-default" href="#" rel="form-inline">Inline</a>
+				</span>
+				<div class="preview">Form</div>
+				<div class="view">
+					<form role="form">
+					  <div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputFile">File input</label>
+						<input type="file" id="exampleInputFile">
+						<p class="help-block">Example block-level help text here.</p>
+					  </div>
+					  <div class="checkbox">
+						<label>
+						  <input type="checkbox"> Check me out
+						</label>
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+				</span>
+				<div class="preview">Horizontal Form</div>
+				<div class="view">
+			<form class="form-horizontal" role="form">
+			  <div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+				<div class="col-sm-10">
+				  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+				<div class="col-sm-10">
+				  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				  <div class="checkbox">
+					<label>
+					  <input type="checkbox"> Remember me
+					</label>
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				  <button type="submit" class="btn btn-default">Sign in</button>
+				</div>
+			  </div>
+			</form>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="" ><a href="#" rel="btn-default">Default</a></li>
+							<li class="" ><a href="#" rel="btn-primary">Primary</a></li>
+							<li class="" ><a href="#" rel="btn-success">Success</a></li>
+							<li class="" ><a href="#" rel="btn-info">Info</a></li>
+							<li class="" ><a href="#" rel="btn-warning">Warning</a></li>
+							<li class="" ><a href="#" rel="btn-danger">Danger</a></li>
+							<li class="" ><a href="#" rel="btn-link">Link</a></li>
+						</ul>
+			</span>
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Size <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="" ><a href="#" rel="btn-lg">Large</a></li>
+							<li class="" ><a href="#" rel="btn-default">Default</a></li>
+							<li class="" ><a href="#" rel="btn-sm">Small</a></li>
+							<li class="" ><a href="#" rel="btn-xs">Mini</a></li>
+						</ul>
+			</span>
+									  
+					<a class="btn btn-xs btn-default" href="#" rel="btn-block">Block</a>
+					<a class="btn btn-xs btn-default" href="#" rel="active">Active</a>
+					<a class="btn btn-xs btn-default" href="#" rel="disabled">Disabled</a>
+				</span>
+				<div class="preview">Button</div>
+				<div class="view">
+					<button type="button" class="btn btn-default" contenteditable="true">Default</button>		
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="" ><a href="#" rel="btn-default">Default</a></li>
+							<li class="" ><a href="#" rel="btn-primary">Primary</a></li>
+							<li class="" ><a href="#" rel="btn-success">Success</a></li>
+							<li class="" ><a href="#" rel="btn-info">Info</a></li>
+							<li class="" ><a href="#" rel="btn-warning">Warning</a></li>
+							<li class="" ><a href="#" rel="btn-danger">Danger</a></li>
+							<li class="" ><a href="#" rel="btn-link">Link</a></li>
+						</ul>
+			</span>
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Size <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="" ><a href="#" rel="btn-lg">Large</a></li>
+							<li class="" ><a href="#" rel="btn-default">Default</a></li>
+							<li class="" ><a href="#" rel="btn-sm">Small</a></li>
+							<li class="" ><a href="#" rel="btn-xs">Mini</a></li>
+						</ul>
+			</span>
+									  
+					<a class="btn btn-xs btn-default" href="#" rel="btn-block">Block</a>
+					<a class="btn btn-xs btn-default" href="#" rel="active">Active</a>
+					<a class="btn btn-xs btn-default" href="#" rel="disabled">Disabled</a>
+				</span>
+				<div class="preview">Anchor Button</div>
+				<div class="view">
+					<a href="#" class="btn" type="button" contenteditable="true">Button</a>
+				</div>
+			</div>
+				<div class="box box-element">
+				 <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+				<span class="drag label"><i class="icon-move"></i>Drag</span>
+				<span class="configuration">
+					<span class="btn-group btn-group-xs">
+				<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Styles <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+							<li class="active" ><a href="#" rel="">Default</a></li>
+							<li class="" ><a href="#" rel="img-rounded">Rounded</a></li>
+							<li class="" ><a href="#" rel="img-circle">Circle</a></li>
+							<li class="" ><a href="#" rel="img-thumbnail">Thumbnail</a></li>
+						</ul>
+			</span>
+				</span>
+				<div class="preview">Image</div>
+				<div class="view">
+					<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+				</div>
+			</div>
+			</li>
+</ul>
+<div>
+</div>
+<!-- CSS Ends Here---------------------------------------------------------------------------------------- -->
+      </div>
+	  
+	  
+        </div>
+           <div class="col-xs-9 column demo ui-sortable" style="min-height: 304px; " id="demoId">
+            <div class="lyrow">
+               <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a>
+             <span class="drag label"><i class="icon-move"></i>Drag</span>
+              <div class="preview">9 3</div>
+              <div class="view">
+                <div class="row-fluid clearfix">
+                  <div class="span12 column ui-sortable">
+                    <div class="box box-element ui-draggable" style="display: block; ">
+                      <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>Remove</a> <span class="drag label"><i class="icon-move"></i>Drag</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">Editor</button> <a class="btn btn-mini" href="#" rel="well">Well</a> </span>
+                      <div class="preview">Jumbotron</div>
+                      <div class="view">
+                        <div class="hero-unit" contenteditable="true">
+                          <h1>Hello, world!</h1>
+                          <p>This is a template for a simple marketing or informational website.</p>
+                          <p> It includes a large callout called the hero unit and three supporting pieces of content.</p>
+                          Use it as a starting point to create something more unique.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- end demo ----------------------------------------------------------------------------------------->
+          <!--/span-->
+          <div id="download-layout">
+            <div class="container-fluid"></div>
+          </div>
+        </div>
+        <!--/row-->
+      </div>
+      <!--/.fluid-container-->
+      <div class="modal hide fade" role="dialog" id="editorModal">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">×</a>
+          <h3 style="color:#3f95f1;">Save your Layout</h3>
+        </div>
+        <div class="modal-body">
+          <p>
+            <textarea id="contenteditor"></textarea>
+          </p>
+        </div>
+        <div class="modal-footer"> <a id="savecontent" class="btn btn-primary" data-dismiss="modal">Save</a> <a class="btn" data-dismiss="modal">Cancel</a> </div>
+      </div>
+      <div class="modal hide fade" role="dialog" id="downloadModal">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">×</a>
+          <h3>Save</h3>
+        </div>
+        <div class="modal-body">
+          <p>Choose how to save your layout</p>
+          <div class="btn-group">
+            <button type="button" id="fluidPage" class="active btn btn-info"><i class="icon-fullscreen icon-white"></i> Fluid Page</button>
+            <button type="button" class="btn btn-info" id="fixedPage"><i class="icon-screenshot icon-white"></i> Fixed page</button>
+			
+          </div>
+          <br>
+          <br>
+          <p>
+            <textarea></textarea>
+          </p>
+        </div>
+        <div class="modal-footer"> <a class="btn btn-primary navbar-btn" data-dismiss="modal" onclick="javascript:saveHtml();">Save</a> </div>
+		
+      </div>
+	  <!-- Start code -->
+	  <div class="modal hide fade" role="dialog" id="SelectByIdModal">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">×</a>
+          <h3>Select</h3>
+        </div>
+        <div class="modal-body">
+          <p>Search By Template Id</p>
+          <div class="btn-group">
+            <input type="text" id="textId">
+            <div class="modal-footer"> 
+			<button class="btn btn-primary navbar-btn" data-dismiss="modal" onclick="javascript:reloadFunction();">Search</button> 
+			</div>
+         </div>
+          </div>
+        </div>
+<!-- -----------Add Query Modal------------------------------------ -->
+ <div class="modal fade" id="SaveQueryModal" role="dialog" style="display:none;"> 
+    <div class="modal-header">
+		Save Your query and  query name
+     </div>
+         <div class="modal-body">
+		<br>
+		<table>
+		<tr>
+		<td>Query Name :</td>
+		<td style="margin-left:5px;padding-top: .5em;padding-bottom: .5em;">
+		<input type="text" name="queryName" style="width: 262px;"></td>
+		</tr><br></br>
+		<tr>
+		<td style="margin-right:5px;padding-top: .5em;padding-bottom: .5em;">Enter your query :</td>
+		<td><textarea name="query" rows="4" cols="30"></textarea></td>
+		</tr>
+		</table>
+	    </div>
+      	<button type="button" class="btn btn-default" onclick="javascript:submitQuery();">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      
+ </div>  
+
+
+<!-- -----------Add Query Modal------------------------------------ -->
+
+
+		</div>
+			
+<!-- Attribute modal after Render 	 -->
+
+<div class="modal fade" id="myAttributeModal" role="dialog">  
+   <form>
+        <div class="modal-header">
+		Select Your query and attributes
+        </div>
+		
+        <div class="modal-body">
+		<br>
+		<table>
+		<tr>
+		<td>Enter your query</td>
+		<td> <textarea name="query" rows="4" cols="30"></textarea></td>
+		</tr>
+		<tr>
+		</tr>
+		</table>
+        </div>
+         <input type="submit" class="btn btn-default" value="submit" onclick="javascript:submitQuery();">
+         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+     </form>
+  </div>  
+	
+<!-- Attribute modal after Render End	 ----------------------------------------->
+	
+<!-- Attribute modal with component Starts	-------------------------------- ------>
+ <div class="modal fade" id="myModal" role="dialog" style="display:none;"> 
+    <div class="modal-header">
+		Save Your query and  query name
+     </div>
+         <div class="modal-body">
+		<br>
+		<table>
+		<tr>
+		<td>Query Name :</td>
+		<td style="margin-left:5px;padding-top: .5em;padding-bottom: .5em;">
+		<input type="text" name="queryName" style="width: 262px;"></td>
+		</tr><br></br>
+		<tr>
+		<td style="margin-right:5px;padding-top: .5em;padding-bottom: .5em;">Enter your query :</td>
+		<td><textarea name="query" rows="4" cols="30"></textarea></td>
+		</tr>
+		</table>
+	    </div>
+      	<button type="button" class="btn btn-default" onclick="javascript:submitQuery();">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      
+ </div>  
+
+ <!-- Attribute modal with component Ends	 -->
+
+    <script type="text/javascript" src="scripts/js/jquery-2.0.0.min.js"></script>
+	<script type="text/javascript" src="scripts/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="scripts/js/bootstrap.min.js"></script> 
+    
+    <script type="text/javascript" src="scripts/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="scripts/js/jquery.htmlClean.js"></script>
+    <script type="text/javascript" src="scripts/ckeditor/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="scripts/ckeditor/config.js"></script>
+    <script type="text/javascript" src="scripts/js/scripts.js"></script>
+    <script type="text/javascript" src="scripts/js/FileSaver.js"></script>
+    <script type="text/javascript" src="scripts/js/blob.js"></script>
+    <script src="scripts/js/docs.min.js"></script>
+	<script src="bower_components/intl-messageformat/dist/intl-messageformat.min.js"></script>
+
+ </div>
+ 
+</div>
