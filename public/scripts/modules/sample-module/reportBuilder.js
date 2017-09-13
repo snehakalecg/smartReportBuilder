@@ -33,13 +33,13 @@ define(['angular', './sample-module'], function (angular, controllers) {
 			$scope.resizeDashboard();
 		});
 		fix height of main portion ends
-
+*/
 		//bootstrap report builder js starts
 		var webpage = "";
 		function supportstorage() {
-			// if (typeof window.localStorage=='object')
-				// return true;
-			//else
+			 if (typeof window.localStorage=='object')
+				 return true;
+			else
 				return false;
 		}
 
@@ -749,5 +749,6 @@ define(['angular', './sample-module'], function (angular, controllers) {
 		
 		
 		
-    */}]);
+    //*/
+    }]);
 });
